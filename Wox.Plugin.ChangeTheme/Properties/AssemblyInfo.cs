@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Wox.Plugin.ChangeTheme")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Plugin for Wox that allows to quickly list and switch the active theme of Windows (tested on Windows 10)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("seza443")]
 [assembly: AssemblyProduct("Wox.Plugin.ChangeTheme")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]

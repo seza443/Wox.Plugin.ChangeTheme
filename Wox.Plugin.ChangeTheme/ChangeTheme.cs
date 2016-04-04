@@ -30,17 +30,24 @@ namespace Wox.Plugin.ChangeTheme
             {
                 themesNames = ThemeManager.getAllThemesNames();
             }
+            string currentThemeName = ThemeManager.GetActiveThemeName();
             List<Result> results = themesNames.Select(p => new Result()
             {
                 Title = p.Name,
-                SubTitle = p.Path,
+                SubTitle = currentThemeName.Equals(p.Name) ? "Currently active" : p.Path,
                 IcoPath = "Images\\Entypo_e79a(0)_64.png",  //relative path to your plugin directory
                 Action = e =>
                 {
                     // after user select the item
-                    ThemeManager.SwitchTheme(p.Path);
-                    // return false to tell Wox don't hide query window, otherwise Wox will hide it automatically
-                    return false;
+                    if (!currentThemeName.Equals(p.Name))
+                    {
+                        ThemeManager.SwitchTheme(p.Path);
+                        return true;
+                    }
+                    else {
+                        // return false to tell Wox don't hide query window, otherwise Wox will hide it automatically
+                        return false;
+                    }
                 }
             }).ToList();
 

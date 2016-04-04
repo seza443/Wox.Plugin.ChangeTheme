@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -90,6 +91,15 @@ namespace Wox.Plugin.ChangeTheme
                 return false;
             }//catch
             return true;
+        }
+
+        public static string GetActiveThemeName()
+        {
+            string RegistryKey = @"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes";
+            string theme;
+            theme = (string)Registry.GetValue(RegistryKey, "CurrentTheme", string.Empty);
+            theme = theme.Split('\\').Last().Split('.').First().ToString();
+            return theme;
         }
 
         private static String StartProcessAndWait(string filename, string arguments, int seconds, ref Boolean bExited)

@@ -4,7 +4,7 @@
   "Name": "Change Windows Theme",
   "Description": "Plugin that allow you to change your Windows theme based on the list of your personnal themes",
   "Author": "seza443",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "Language": "csharp",
   "Website": "https://github.com/seza443/Wox.Plugin.ChangeTheme",
   "IcoPath": "Images\\Entypo_e79a(0)_64.png",

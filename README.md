@@ -1,6 +1,9 @@
 # Wox.Plugin.ChangeTheme
 
-Plugin for Wox that allows to quickly list and switch the active theme of Windows (tested on Windows 10)
+[Plugin](http://www.getwox.com/plugin) for [Wox](http://www.getwox.com/) that allows to quickly list and switch the active theme of Windows (tested on Windows 10)
+
+## Installation
+```wpm install Change Windows Theme```
 
 ## Usage 
 
